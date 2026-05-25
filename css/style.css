@@ -112,8 +112,40 @@ header {
     align-items: center;
 }
 
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
 .logo img {
-    height: 50px;
+    height: 55px;
+    width: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-name {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.3rem;
+    color: var(--black);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo-subtitle {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.1rem;
+    color: var(--black);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .nav-links {
@@ -161,19 +193,27 @@ header {
 /* Hero */
 .hero {
     height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://web.archive.org/web/20260212100324im_/http://simunek-roubenky.cz/wp-content/uploads/2025/03/DSC0693-scaled-e1743012031384.jpeg');
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('../assets/hero-image.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
-    justify-content: center;
     color: var(--white);
-    text-align: center;
+    text-align: left;
+}
+
+.hero .container {
+    width: 100%;
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.hero h1 strong {
+    display: block;
 }
 
 .hero .subtitle {
@@ -223,10 +263,10 @@ section {
 }
 
 .service-card img {
-    width: 140px;
-    height: 140px;
+    width: 100%;
+    height: 200px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 12px;
     margin: 0 auto 20px;
     border: 1px solid #ddd;
 }
@@ -366,19 +406,29 @@ footer {
     font-size: 0.9rem;
 }
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 40px;
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-info {
     margin-bottom: 30px;
+}
+
+.footer-divider {
+    width: 60px;
+    height: 1px;
+    background: #333;
+    margin: 0 auto 30px;
 }
 
 .footer-bottom {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
 /* Slider */
@@ -440,8 +490,29 @@ footer {
 }
 
 .footer-logo {
-    width: 150px;
+    height: 40px;
+    width: auto;
     margin: 0;
+}
+
+.footer-logo-container .logo-name,
+.footer-logo-container .logo-subtitle {
+    color: var(--white);
+}
+
+.footer-logo-container .logo-name {
+    font-size: 1.1rem;
+}
+
+.footer-logo-container .logo-subtitle {
+    font-size: 0.9rem;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
 }
 
 .small {
@@ -523,7 +594,7 @@ footer {
         height: 40px;
     }
 
-    .grid, .services-grid, .footer-grid {
+    .grid, .services-grid {
         grid-template-columns: 1fr;
     }
 
@@ -531,18 +602,36 @@ footer {
         gap: 30px;
     }
 
+    .hero {
+        text-align: center;
+        height: 60vh;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
+    }
+
+    .hero h1 strong {
+        display: inline;
     }
     
     h2 {
         font-size: 2rem;
     }
 
+    .footer-content {
+        gap: 20px;
+    }
+
     .footer-bottom {
         flex-direction: column;
         gap: 20px;
         text-align: center;
+        align-items: center;
+    }
+
+    .footer-logo-container {
+        justify-content: center;
     }
 
     .contact-links {
@@ -570,11 +659,8 @@ footer {
         display: flex;
     }
     
-    .footer-bottom {
-        text-align: left;
-    }
     
     .footer-logo {
-        margin: 20px 0;
+        height: 35px;
     }
 }
