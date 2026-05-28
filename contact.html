@@ -5,7 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt | Roubenky Šimůnek – Turnov, Český ráj</title>
     <meta name="description" content="Kontaktujte nás pro cenovou nabídku vaší nové roubenky nebo dřevostavby. Sídlíme v Turnově – Pelešanech a působíme v celém Českém ráji a Jizerských horách.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://simunek-roubenky.cz/contact.html">
+    <meta property="og:title" content="Kontakt | Roubenky Šimůnek">
+    <meta property="og:description" content="Kontaktujte nás pro cenovou nabídku vaší nové roubenky nebo dřevostavby. Sídlíme v Turnově.">
+    <meta property="og:image" content="https://simunek-roubenky.cz/img/logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://simunek-roubenky.cz/contact.html">
+    <meta property="twitter:title" content="Kontakt | Roubenky Šimůnek">
+    <meta property="twitter:description" content="Kontaktujte nás pro cenovou nabídku vaší nové roubenky nebo dřevostavby. Sídlíme v Turnově.">
+    <meta property="twitter:image" content="https://simunek-roubenky.cz/img/logo.png">
+
     <link rel="canonical" href="https://simunek-roubenky.cz/contact.html">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Úvodní stránka",
+        "item": "https://simunek-roubenky.cz/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Kontakt",
+        "item": "https://simunek-roubenky.cz/contact.html"
+      }]
+    }
+    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -47,6 +81,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 </head>
 <body>
     <header>
@@ -111,10 +146,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contact-map">
-                        <!-- Placeholder pro mapu nebo obrázek sídla -->
-                        <img src="https://web.archive.org/web/20260212100324im_/http://simunek-roubenky.cz/wp-content/uploads/2025/04/DSC00264-scaled.jpg" alt="Naše dílna" style="border-radius: 12px;">
-                    </div>
+                    <div id="map" class="contact-map"></div>
                 </div>
             </div>
         </section>
@@ -131,7 +163,7 @@
             <div class="footer-divider"></div>
 
             <div class="footer-bottom">
-                <p>Roubenky Šimůnek © 2025</p>
+                <p>Roubenky Šimůnek © <span id="current-year">2026</span></p>
                 
                 <div class="logo footer-logo-container">
                     <img src="img/logo-white.png" alt="Roubenky Šimůnek" class="footer-logo">
@@ -146,6 +178,17 @@
         </div>
     </footer>
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <button class="lightbox-prev" aria-label="Předchozí"><i class="fas fa-chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+        <button class="lightbox-next" aria-label="Další"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="js/script.js"></script>
 </body>
 </html>
