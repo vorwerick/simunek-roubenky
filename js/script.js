@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxClose = document.querySelector('.lightbox-close');
     const lightboxPrev = document.querySelector('.lightbox-prev');
     const lightboxNext = document.querySelector('.lightbox-next');
-    const galleryImages = document.querySelectorAll('.gallery-preview img, .gallery-grid img, .about .image-content img, .contact-map img');
+    const galleryImages = document.querySelectorAll('.gallery-preview img, .gallery-grid img, .about .image-content img, .contact-map img, .slider-image');
     
     let currentGalleryIndex = 0;
 
