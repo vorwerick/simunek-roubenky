@@ -147,6 +147,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateExperienceYears();
     
+    // Intersection Observer pro postupné načítání galerie a prvků na stránce
+    const animatedItems = document.querySelectorAll('.gallery-item, .visible-on-scroll, .slider, .image-content');
+    if (animatedItems.length > 0) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const item = entry.target;
+                    
+                    // Funkcionální lazy loading - načtení obrázku
+                    const img = item.querySelector('img');
+                    if (img && img.dataset.src) {
+                        img.src = img.dataset.src;
+                        // Volitelně odstraníme data-src po načtení
+                        img.removeAttribute('data-src');
+                    }
+                    
+                    // Pokud jde o slider na hlavní stránce, který nemá .gallery-item ale .slider-image
+                    if (item.classList.contains('slider')) {
+                        const sliderImages = item.querySelectorAll('.slider-image');
+                        sliderImages.forEach(sliderImg => {
+                            if (sliderImg.dataset.src) {
+                                sliderImg.src = sliderImg.dataset.src;
+                                sliderImg.removeAttribute('data-src');
+                            }
+                        });
+                    } else if (item.classList.contains('image-content')) {
+                        // Podpora pro obrázky v sekcích jako "O nás"
+                        const contentImg = item.querySelector('img');
+                        if (contentImg && contentImg.dataset.src) {
+                            contentImg.src = contentImg.dataset.src;
+                            contentImg.removeAttribute('data-src');
+                        }
+                    }
+
+                    item.classList.add('visible');
+                    observer.unobserve(item);
+                }
+            });
+        }, observerOptions);
+
+        animatedItems.forEach(item => {
+            observer.observe(item);
+        });
+    }
+    
     // Inicializace mapy na stránce kontakt
     const mapElement = document.getElementById('map');
     if (mapElement) {
