@@ -39,6 +39,84 @@
     }
     </script>
     <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Roubenky Šimůnek",
+            "image": "https://simunek-roubenky.cz/img/logo.png",
+            "@id": "https://simunek-roubenky.cz/",
+            "url": "https://simunek-roubenky.cz/",
+            "telephone": "+420603425145",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Pelešany 124",
+                "addressLocality": "Turnov",
+                "postalCode": "511 01",
+                "addressCountry": "CZ"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 50.5701017,
+                "longitude": 15.1673439
+            },
+            "description": "Specializujeme se na stavbu roubenek a dřevostaveb na klíč. Více než 28 let zkušeností v Českém ráji.",
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ],
+                "opens": "07:00",
+                "closes": "16:00"
+            },
+            "areaServed": [
+                {
+                    "@type": "AdministrativeArea",
+                    "name": "Český ráj"
+                },
+                {
+                    "@type": "AdministrativeArea",
+                    "name": "Jizerské hory"
+                },
+                {
+                    "@type": "AdministrativeArea",
+                    "name": "Liberecký kraj"
+                }
+            ],
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Stavební a truhlářské služby",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Stavba roubenek na klíč"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Stavba dřevostaveb"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Truhlářská výroba"
+                        }
+                    }
+                ]
+            },
+            "sameAs": []
+        }
+    </script>
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -98,7 +176,7 @@
                 <div class="grid">
                     <div class="text-content">
                         <h2>O nás</h2>
-                        <p>Jsme tesařská a truhlářská firma z Pelešan u Turnova a specializujeme se na stavbu roubenek a dřevostaveb. Stavíme již <span class="years-text">více než 27 let</span> a za tu dobu jsme postavili přes 80 roubenek a dřevostaveb v Českém Ráji a Jizerských horách. Máme dlouholeté zkušenosti s prací se dřevem a dbáme na precizní zpracování každého detailu. Máme vlastní špičkově vybavenou truhlářskou dílnu a stavebně truhlářské prvky si do staveb dodáváme sami. Stavby dodáváme dle požadavků subdodavatelsky a nebo na klíč.</p>
+                        <p>Jsme tesařská a truhlářská firma z Pelešan u Turnova a specializujeme se na <strong>stavbu roubenek</strong> a <strong>dřevostaveb na klíč</strong>. Stavíme již <span class="years-text">více než 28 let</span> a za tu dobu jsme realizovali přes 80 roubenek a dřevostaveb v regionu <strong>Český ráj</strong> a <strong>Jizerské hory</strong>. Máme dlouholeté zkušenosti s precizním zpracováním dřeva a vlastní špičkově vybavenou truhlářskou dílnu, kde vyrábíme veškeré stavebně truhlářské prvky. Naše služby zahrnují vše od návrhu až po kompletní dodávku stavby na klíč.</p>
                     </div>
                     <div class="image-content">
                         <img src="assets/about.jpg" alt="Stavba tradiční roubenky v Českém ráji">
@@ -186,11 +264,11 @@
                     <div class="text-content">
                         <p>Zakládáme si na preciznosti a tradičních postupech. Zaměřujeme se na <strong>kompletní výstavbu</strong> a zajišťujeme veškeré subdodávky pro kompletaci celé nemovitosti, abyste se nemuseli o nic starat. Díky naší vlastní truhlářské dílně vyrábíme <strong>vlastní okna, dveře i pergoly</strong>, což nám umožňuje hlídat kvalitu každého prvku vaší stavby.</p>
                         <ul class="check-list">
-                            <li><strong class="years-text">Více než 27 let zkušeností</strong></li>
-                            <li><strong>Přes 80 realizovaných staveb</strong></li>
-                            <li><strong>Všechny dřevěné prvky vyrábíme sami</strong></li>
-                            <li><strong>Poctivá řemeslná práce</strong></li>
-                            <li><strong>Individuální přístup</strong></li>
+                            <li><strong class="years-text">Více než 28 let zkušeností v oboru</strong></li>
+                            <li><strong>Přes 80 úspěšně realizovaných staveb</strong></li>
+                            <li><strong>Vlastní výroba všech dřevěných prvků</strong></li>
+                            <li><strong>Poctivé tesařské a truhlářské řemeslo</strong></li>
+                            <li><strong>Individuální přístup a stavba na klíč</strong></li>
                         </ul>
                     </div>
                     <div class="image-content">
@@ -250,11 +328,12 @@
 
     <footer>
         <div class="container footer-content">
-            <div class="footer-info">
-                <p><strong>Radek Šimůnek</strong></p>
-                <p>Pelešany 124, 511 01 Turnov 1</p>
-                <p class="small">IČ: 49074172 | DIČ: CZ7205170016</p>
-            </div>
+                <div class="footer-info">
+                    <p><strong>Radek Šimůnek - Roubenky a dřevostavby</strong></p>
+                    <p>Pelešany 124, 511 01 Turnov 1</p>
+                    <p class="small">IČ: 49074172 | DIČ: CZ7205170016</p>
+                    <p class="small">Specialista na roubenky v Českém ráji a Jizerských horách.</p>
+                </div>
             
             <div class="footer-divider"></div>
 

@@ -150,9 +150,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializace mapy na stránce kontakt
     const mapElement = document.getElementById('map');
     if (mapElement) {
-        const lat = 50.5732231;
-        const lng = 15.1581553;
-        const zoom = 15;
+        const lat = 50.5701017;
+        const lng = 15.1673439;
+        const zoom = 12;
         
         const map = L.map('map').setView([lat, lng], zoom);
         
